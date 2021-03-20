@@ -4,6 +4,7 @@
     --ppurple: #6b1fb1;
     --pblack: #0b0630;
     color: var(--pwhite);
+    font-family: sans-serif;
   }
 
 body {
@@ -21,17 +22,17 @@ header {
 main {
     flex: 1;
     flex-direction: column;
+    font-size: 48px;
 }
 .container {
-    width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1.3fr 1fr;
-    grid-template-rows: repeat(1, minmax(1fr, 1fr));
+    grid-template-rows: 1fr;
     grid-template-areas:
     "player1 game-grid player2";
-    gap: 2vw;
-    align-items: stretch; 
+    gap: 1vw;
+    align-items: center; 
 }
 #player1 {
     grid-area: player1;
@@ -42,14 +43,18 @@ main {
 #game-grid {
     grid-area: game-grid;
     display: grid;
+    height: 40vw;
+    width: 40vw;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 2vw;
-    padding: 10vh 0;
+    gap: 0.5vw;
+    padding: 0 0;
+    background-color: var(--ppurple);
 }
 footer {
-    background-color: purple;
+    background-color: var(--pblack);
     height: 10vh;
+    width: 100%;
 }
 
 .player-column {
@@ -71,6 +76,4 @@ footer {
     background-color: var(--pblack);
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--pwhite);
-    border-radius: 20px;
 }
