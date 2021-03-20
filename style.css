@@ -1,43 +1,51 @@
+:root {
+    --pwhite: #f8e3c4;
+    --ppink: #cc3495;
+    --ppurple: #6b1fb1;
+    --pblack: #0b0630;
+    color: var(--pwhite);
+  }
+
 body {
     height: 98vh;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(180deg, var(--pblack) 25%, var(--ppurple) 100%);
 }
 header {
     display: grid;
     justify-content: center;
     margin: auto 12.5vw 2vh 12.5vw;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--pwhite);
 }
 main {
     flex: 1;
     flex-direction: column;
-    background-color: blue;
 }
 .container {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1.3fr 1fr;
     grid-template-rows: repeat(1, minmax(1fr, 1fr));
     grid-template-areas:
     "player1 game-grid player2";
     gap: 2vw;
-    align-items: stretch;
-    background-color: grey;   
+    align-items: stretch; 
 }
 #player1 {
     grid-area: player1;
-    background-color: red;
-
 }
 #player2 {
     grid-area: player2;
-    background-color: yellow;
 }
 #game-grid {
     grid-area: game-grid;
-    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2vw;
+    padding: 10vh 0;
 }
 footer {
     background-color: purple;
@@ -50,5 +58,19 @@ footer {
     justify-content: center;
 }
 .player-box {
-    background-color: blue;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--ppurple);
+    border: 1px solid var(--pwhite);
+    padding: 10vh 0 10vh 0;
+    margin: 0 2vw;
+}
+
+.game-grid-square {
+    display: flex;
+    background-color: var(--pblack);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--pwhite);
+    border-radius: 20px;
 }
