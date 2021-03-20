@@ -6,7 +6,7 @@ body {
 header {
     display: grid;
     justify-content: center;
-    margin-bottom: 2vh;
+    margin: auto 12.5vw 2vh 12.5vw;
     border-bottom: 2px solid black;
 }
 main {
@@ -22,13 +22,14 @@ main {
     grid-template-rows: repeat(1, minmax(1fr, 1fr));
     grid-template-areas:
     "player1 game-grid player2";
-    gap: 3vw;
+    gap: 2vw;
     align-items: stretch;
     background-color: grey;   
 }
 #player1 {
     grid-area: player1;
     background-color: red;
+
 }
 #player2 {
     grid-area: player2;
@@ -41,4 +42,13 @@ main {
 footer {
     background-color: purple;
     height: 10vh;
+}
+
+.player-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.player-box {
+    background-color: blue;
 }
