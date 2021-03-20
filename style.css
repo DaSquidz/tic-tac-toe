@@ -1,0 +1,44 @@
+body {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 2vh;
+    border-bottom: 2px solid black;
+}
+main {
+    flex: 1;
+    flex-direction: column;
+    background-color: blue;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(1, minmax(1fr, 1fr));
+    grid-template-areas:
+    "player1 game-grid player2";
+    gap: 3vw;
+    align-items: stretch;
+    background-color: grey;   
+}
+#player1 {
+    grid-area: player1;
+    background-color: red;
+}
+#player2 {
+    grid-area: player2;
+    background-color: yellow;
+}
+#game-grid {
+    grid-area: game-grid;
+    background-color: green;
+}
+footer {
+    background-color: purple;
+    height: 10vh;
+}
