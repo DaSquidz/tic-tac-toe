@@ -45,8 +45,8 @@ main {
     justify-self: center;
     grid-area: game-grid;
     display: grid;
-    height: 40vw;
-    width: 40vw;
+    height: 30vw;
+    width: 30vw;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0.5vw;
