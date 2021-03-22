@@ -24,7 +24,7 @@ main {
     width: 99vw;
 }
 .container {
-    height: 88vh;
+    height: 82vh;
     display: grid;
     grid-template-columns: 1fr 1.3fr 1fr;
     grid-template-rows: 5fr 1fr;
@@ -42,6 +42,7 @@ main {
     grid-area: player2;
 }
 #game-grid {
+    justify-self: center;
     grid-area: game-grid;
     display: grid;
     height: 40vw;
@@ -90,4 +91,24 @@ main {
 }
 .current-turn {
   box-shadow: var(--pwhite) 0px 30px 40px,var(--pwhite) 0px -12px 30px, var(--pwhite) 0px 4px 6px, var(--pwhite) 0px 12px 13px, var(--pwhite) 0px -3px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas:
+        "game-grid game-grid"
+        "player1 player2"
+        "restart-button restart-button";
+    }
+    .player-box {
+        padding: 3vh 0;
+        margin: 1vh 1vw;
+    }
+    #game-grid {
+    height: 50vw;
+    width: 50vw;
+    margin-top: 5vh;
+    }
 }
