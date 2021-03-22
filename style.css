@@ -28,9 +28,10 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1.3fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 5fr 1fr;
     grid-template-areas:
-    "player1 game-grid player2";
+    "player1 game-grid player2"
+    ". restart-button .";
     gap: 1vw;
     align-items: center; 
 }
@@ -51,6 +52,11 @@ main {
     padding: 0 0;
     background-color: var(--ppurple);
 }
+#restart-button-cont {
+  grid-area: restart-button;
+  display: grid;
+  justify-content: center;
+}
 footer {
     background-color: var(--pblack);
     height: 10vh;
@@ -70,10 +76,22 @@ footer {
     padding: 10vh 0 10vh 0;
     margin: 0 2vw;
 }
-
+#restart-btn {
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  background-color: var(--pblack);
+  border: 1px solid var(--pwhite);
+  color: var(--pwhite);
+  padding: 3vh 5vw;
+  outline: none;
+}
 .game-grid-square {
     display: flex;
     background-color: var(--pblack);
     justify-content: center;
     align-items: center;
+}
+.current-turn {
+  box-shadow: var(--pwhite) 0px 30px 40px,var(--pwhite) 0px -12px 30px, var(--pwhite) 0px 4px 6px, var(--pwhite) 0px 12px 13px, var(--pwhite) 0px -3px 5px;
 }
