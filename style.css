@@ -87,7 +87,7 @@ main {
     background-color: var(--pblack);
     justify-content: center;
     align-items: center;
-    font-size: 10vmin;
+    font-size: 50px;
 }
 .current-turn {
   box-shadow: var(--pwhite) 0px 30px 40px,var(--pwhite) 0px -12px 30px, var(--pwhite) 0px 4px 6px, var(--pwhite) 0px 12px 13px, var(--pwhite) 0px -3px 5px;
@@ -110,5 +110,8 @@ main {
     height: 50vw;
     width: 50vw;
     margin-top: 5vh;
+    }
+    .game-grid-square {
+        font-size: 24px;
     }
 }

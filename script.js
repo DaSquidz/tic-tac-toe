@@ -1,7 +1,7 @@
 "use strict";
 
 const gameBoard = (() => {
-    let currentMark = "O";
+    let currentMark = "X";
     const gridSquares = document.querySelectorAll(".game-grid-square");
     const restartButton = document.getElementById('restart-btn');
     const marksArray = ["","","","","","","","",""];
@@ -25,7 +25,7 @@ const gameBoard = (() => {
             marksArray[i] = "";
           drawArrayToGrid();
           gameManager.gameOver = false;
-          currentMark = "O";
+          currentMark = "X";
           if(UIManager.playerBoxes[1].classList.contains("current-turn")) UIManager.changeTurnIndication();
         };
       UIManager.playerBoxes[0].innerText = `Player 1`;
